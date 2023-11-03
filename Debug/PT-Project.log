@@ -1,0 +1,81 @@
+﻿cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  TestCode.cpp
+  Output.cpp
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(188,20): warning C4838: conversion from 'long double' to 'int' requires a narrowing conversion
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(188,20): warning C4244: 'initializing': conversion from 'long double' to 'int', possible loss of data
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(188,33): warning C4838: conversion from 'long double' to 'int' requires a narrowing conversion
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(188,33): warning C4244: 'initializing': conversion from 'long double' to 'int', possible loss of data
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(188,46): warning C4838: conversion from 'long double' to 'int' requires a narrowing conversion
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(188,46): warning C4244: 'initializing': conversion from 'long double' to 'int', possible loss of data
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(188,55): warning C4838: conversion from 'long double' to 'int' requires a narrowing conversion
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(188,55): warning C4244: 'initializing': conversion from 'long double' to 'int', possible loss of data
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(188,68): warning C4838: conversion from 'long double' to 'int' requires a narrowing conversion
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(188,68): warning C4244: 'initializing': conversion from 'long double' to 'int', possible loss of data
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(188,81): warning C4838: conversion from 'long double' to 'int' requires a narrowing conversion
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(188,81): warning C4244: 'initializing': conversion from 'long double' to 'int', possible loss of data
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(189,20): warning C4838: conversion from 'long double' to 'int' requires a narrowing conversion
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(189,20): warning C4244: 'initializing': conversion from 'long double' to 'int', possible loss of data
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(189,46): warning C4838: conversion from 'long double' to 'int' requires a narrowing conversion
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(189,46): warning C4244: 'initializing': conversion from 'long double' to 'int', possible loss of data
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(189,76): warning C4838: conversion from 'long double' to 'int' requires a narrowing conversion
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(189,76): warning C4244: 'initializing': conversion from 'long double' to 'int', possible loss of data
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(189,102): warning C4838: conversion from 'long double' to 'int' requires a narrowing conversion
+D:\myGit\Paint-For-Kids\GUI\Output.cpp(189,102): warning C4244: 'initializing': conversion from 'long double' to 'int', possible loss of data
+  Input.cpp
+  windowinput.cpp
+  mousequeue.cpp
+  keyqueue.cpp
+  image.cpp
+D:\myGit\Paint-For-Kids\CMUgraphicsLib\image.cpp(115,29): warning C4018: '<': signed/unsigned mismatch
+  colors.cpp
+  CMUgraphics.cpp
+D:\myGit\Paint-For-Kids\CMUgraphicsLib\CMUgraphics.cpp(257,9): warning C4101: 'iX': unreferenced local variable
+D:\myGit\Paint-For-Kids\CMUgraphicsLib\CMUgraphics.cpp(257,13): warning C4101: 'iY': unreferenced local variable
+D:\myGit\Paint-For-Kids\CMUgraphicsLib\CMUgraphics.cpp(751,3): warning C4996: 'strcpy': This function or variable may be unsafe. Consider using strcpy_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\myGit\Paint-For-Kids\CMUgraphicsLib\CMUgraphics.cpp(1164,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\myGit\Paint-For-Kids\CMUgraphicsLib\CMUgraphics.cpp(1171,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\myGit\Paint-For-Kids\CMUgraphicsLib\CMUgraphics.cpp(1202,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\myGit\Paint-For-Kids\CMUgraphicsLib\CMUgraphics.cpp(1210,2): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\myGit\Paint-For-Kids\CMUgraphicsLib\CMUgraphics.cpp(1357,23): warning C4018: '>': signed/unsigned mismatch
+  auxil.cpp
+  Generating Code...
+cl : command line  warning D9035: option 'Gm' has been deprecated and will be removed in a future release
+  jutils.c
+  jquant2.c
+  jquant1.c
+  jmemnobs.c
+  jmemmgr.c
+D:\myGit\Paint-For-Kids\CMUgraphicsLib\jpeg\jmemmgr.c(1103,19): warning C4996: 'getenv': This function or variable may be unsafe. Consider using _dupenv_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\myGit\Paint-For-Kids\CMUgraphicsLib\jpeg\jmemmgr.c(1106,11): warning C4996: 'sscanf': This function or variable may be unsafe. Consider using sscanf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  jidctred.c
+  jidctint.c
+  jidctfst.c
+  jidctflt.c
+  jerror.c
+D:\myGit\Paint-For-Kids\CMUgraphicsLib\jpeg\jerror.c(169,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+D:\myGit\Paint-For-Kids\CMUgraphicsLib\jpeg\jerror.c(171,5): warning C4996: 'sprintf': This function or variable may be unsafe. Consider using sprintf_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  jdtrans.c
+  jdsample.c
+  jdpostct.c
+  jdphuff.c
+  jdmerge.c
+  jdmaster.c
+  jdmarker.c
+  jdmainct.c
+  jdinput.c
+  jdhuff.c
+  Generating Code...
+  Compiling...
+  jddctmgr.c
+  jdcolor.c
+  jdcoefct.c
+  jdatasrc.c
+  jdapistd.c
+  jdapimin.c
+  jcparam.c
+  jcomapi.c
+  jpegload.c
+D:\myGit\Paint-For-Kids\CMUgraphicsLib\jpegload.c(23,12): warning C4996: 'fopen': This function or variable may be unsafe. Consider using fopen_s instead. To disable deprecation, use _CRT_SECURE_NO_WARNINGS. See online help for details.
+  Generating Code...
+auxil.obj : warning LNK4075: ignoring '/EDITANDCONTINUE' due to '/SAFESEH' specification
+  PT-Project.vcxproj -> D:\myGit\Paint-For-Kids\Debug\PT Project.exe
