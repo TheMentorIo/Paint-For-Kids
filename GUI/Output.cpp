@@ -161,6 +161,46 @@ void Output::DrawRect(Point P1, Point P2, GfxInfo RectGfxInfo, bool selected) co
 	pWind->DrawRectangle(P1.x, P1.y, P2.x, P2.y, style);
 	
 }
+void Output::DrawTri(Point P1, Point P2, Point P3, GfxInfo TritGfxInfo, bool selected) const
+{
+	color DrawingClr;
+	drawstyle style;
+	if (selected)
+		DrawingClr = UI.HighlightColor;
+	else
+		DrawingClr = TritGfxInfo.DrawClr;
+	pWind->SetPen(DrawingClr, 1);
+	if (TritGfxInfo.isFilled)
+	{
+		style = FILLED;
+		pWind->SetBrush(TritGfxInfo.FillClr);
+	}
+	else
+		style = FRAME;
+	pWind->DrawTriangle(P1.x, P1.y, P2.x, P2.y, P3.x, P3.y, style);
+}
+
+void Output::DrawHex(Point P1, GfxInfo HexGfxInfo, bool selected) const
+{
+	color DrawingClr;
+	drawstyle style;
+	long double l = 150;
+	int x[6] = { P1.x - l / 2,P1.x + l / 2,P1.x + l,P1.x + l / 2,P1.x - l / 2,P1.x - l };
+	int y[6] = { P1.y - sqrt(3) * l / 2.0, P1.y - sqrt(3) * l / 2.0,P1.y,P1.y + sqrt(3) * l / 2.0, P1.y + sqrt(3) * l / 2.0, P1.y };
+	if (selected)
+		DrawingClr = UI.HighlightColor;
+	else
+		DrawingClr = HexGfxInfo.DrawClr;
+	pWind->SetPen(DrawingClr, 1);
+	if (HexGfxInfo.isFilled)
+	{
+		style = FILLED;
+		pWind->SetBrush(HexGfxInfo.FillClr);
+	}
+	else style = FRAME;
+	pWind->DrawPolygon(x, y, 6, style);
+}
+
 
 
 //////////////////////////////////////////////////////////////////////////////////////////

@@ -19,7 +19,9 @@ public:
 	void ClearDrawArea() const;	//Clears the drawing area
 	
 	// -- Figures Drawing functions
-	void DrawRect(Point P1, Point P2, GfxInfo RectGfxInfo, bool selected=false) const;  //Draw a rectangle
+	void DrawRect(Point P1, Point P2, GfxInfo RectGfxInfo, bool selected=false) const;           //Draw a rectangle
+	void DrawTri(Point P1, Point P2, Point P3, GfxInfo TriGfxInfo, bool selected = false) const;  //Draw a triangle
+	void DrawHex(Point P1, GfxInfo HexGfxInfo, bool selected = false) const;                       //Draw a Hexagon
 	
 	///Make similar functions for drawing all other figure types.
 	
