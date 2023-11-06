@@ -159,8 +159,29 @@ void Output::DrawRect(Point P1, Point P2, GfxInfo RectGfxInfo, bool selected) co
 
 	
 	pWind->DrawRectangle(P1.x, P1.y, P2.x, P2.y, style);
-	
 }
+
+void Output::DrawSquare(Point P1, GfxInfo SquareGfxInfo, bool selected) const
+{
+	double length = 65;
+	color DrawingClr;
+	if (selected)
+		DrawingClr = UI.HighlightColor;
+	else
+		DrawingClr = SquareGfxInfo.DrawClr;
+
+	pWind->SetPen(DrawingClr, 1);
+	drawstyle style;
+	if (SquareGfxInfo.isFilled)
+	{
+		style = FILLED;
+		pWind->SetBrush(SquareGfxInfo.FillClr);
+	}
+	else
+		style = FRAME;
+	pWind->DrawRectangle(P1.x - length, P1.y - length, P1.x + length, P1.y + length, style);
+}
+
 void Output::DrawTri(Point P1, Point P2, Point P3, GfxInfo TritGfxInfo, bool selected) const
 {
 	color DrawingClr;
@@ -201,7 +222,26 @@ void Output::DrawHex(Point P1, GfxInfo HexGfxInfo, bool selected) const
 	pWind->DrawPolygon(x, y, 6, style);
 }
 
+void Output::DrawCircle(Point P1, Point P2, GfxInfo CircleGfxInfo, bool selected) const
+{
+	double radius = sqrt(pow((P1.x - P2.x), 2) + pow((P1.y - P2.y), 2));
+	color DrawingClr;
+	if (selected)
+		DrawingClr = UI.HighlightColor;
+	else
+		DrawingClr = CircleGfxInfo.DrawClr;
 
+	pWind->SetPen(DrawingClr, 1);
+	drawstyle style;
+	if (CircleGfxInfo.isFilled)
+	{
+		style = FILLED;
+		pWind->SetBrush(CircleGfxInfo.FillClr);
+	}
+	else
+		style = FRAME;
+	pWind->DrawCircle(P1.x, P1.y, radius, style);
+}
 
 //////////////////////////////////////////////////////////////////////////////////////////
 Output::~Output()
