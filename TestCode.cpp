@@ -130,12 +130,11 @@ int main()
 	pIn->GetPointClicked(P1.x, P1.y);
 	pIn->GetPointClicked(P2.x, P2.y);
 	pIn->GetPointClicked(P3.x, P3.y);
-
 	gfxInfo.BorderWdth = 5;
 	gfxInfo.DrawClr = BLACK;	//any color for border
 	gfxInfo.isFilled = false;	//Figure is NOT filled
 	pOut->DrawTri(P1, P2, P3, gfxInfo, false);
-
+	
 	// 2.3.2 - Drawing highlighted non-filled triangle
 	pOut->PrintMessage("Drawing a Triangle ==> Highlighted non-filled, Click to Highlight");
 	pIn->GetPointClicked(x, y);	//Wait for any click

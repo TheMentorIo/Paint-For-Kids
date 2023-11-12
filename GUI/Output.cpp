@@ -112,6 +112,11 @@ void Output::ClearDrawArea() const
 	pWind->DrawRectangle(0, UI.ToolBarHeight, UI.width, UI.height - UI.StatusBarHeight);
 	
 }
+bool Output::isValid(Point p)const
+{
+	return (p.y > UI.ToolBarHeight && p.y<UI.height-UI.StatusBarHeight && p.x>0 &&p.x<UI.width);
+}
+
 //////////////////////////////////////////////////////////////////////////////////////////
 
 void Output::PrintMessage(string msg) const	//Prints a message on status bar
@@ -183,22 +188,29 @@ void Output::DrawSquare(Point P1, GfxInfo SquareGfxInfo, bool selected) const
 }
 
 void Output::DrawTri(Point P1, Point P2, Point P3, GfxInfo TritGfxInfo, bool selected) const
-{
+{ 
 	color DrawingClr;
 	drawstyle style;
-	if (selected)
-		DrawingClr = UI.HighlightColor;
-	else
-		DrawingClr = TritGfxInfo.DrawClr;
-	pWind->SetPen(DrawingClr, 1);
-	if (TritGfxInfo.isFilled)
+	if(isValid(P1) && isValid(P2) && isValid(P3))
 	{
-		style = FILLED;
-		pWind->SetBrush(TritGfxInfo.FillClr);
+		if (selected)
+			DrawingClr = UI.HighlightColor;
+		else
+			DrawingClr = TritGfxInfo.DrawClr;
+		pWind->SetPen(DrawingClr, 1);
+		if (TritGfxInfo.isFilled)
+		{
+			style = FILLED;
+			pWind->SetBrush(TritGfxInfo.FillClr);
+		}
+		else
+			style = FRAME;
+		pWind->DrawTriangle(P1.x, P1.y, P2.x, P2.y, P3.x, P3.y, style);
 	}
 	else
-		style = FRAME;
-	pWind->DrawTriangle(P1.x, P1.y, P2.x, P2.y, P3.x, P3.y, style);
+	{
+		return;
+	}
 }
 
 void Output::DrawHex(Point P1, GfxInfo HexGfxInfo, bool selected) const
