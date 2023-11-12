@@ -170,6 +170,8 @@ int main()
 
 	// 2.4.1 - Drawing non-filled Hexagon
 	pOut->PrintMessage("Drawing a Hexagon ==> non-filled,  Click one point (The centre)");
+	
+	
 	pIn->GetPointClicked(P1.x, P1.y);
 
 	gfxInfo.BorderWdth = 5;
@@ -177,7 +179,7 @@ int main()
 	gfxInfo.isFilled = false;	//Figure is NOT filled
 	pOut->DrawHex(P1, gfxInfo, false);
 
-
+	
 	// 2.4.2 - Drawing highlighted non-filled Hexagon
 	pOut->PrintMessage("Drawing a Hexagon ==> Highlighted non-filled, Click to Highlight");
 	pIn->GetPointClicked(x, y);	//Wait for any click

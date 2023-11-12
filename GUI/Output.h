@@ -17,7 +17,7 @@ public:
 	Input* CreateInput() const; //creates a pointer to the Input object	
 	void ClearStatusBar() const;	//Clears the status bar
 	void ClearDrawArea() const;	//Clears the drawing area
-	bool isValid(Point p)const;
+	bool isValid(Point p,double ly=0,double lx=0)const;
 	// -- Figures Drawing functions
 	void DrawRect(Point P1, Point P2, GfxInfo RectGfxInfo, bool selected=false) const;				//Draw a Rectangle
 	void DrawSquare(Point P1, GfxInfo SquareGfxInfo, bool selected = false) const;					//Draw a Square

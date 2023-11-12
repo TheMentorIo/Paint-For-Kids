@@ -112,9 +112,9 @@ void Output::ClearDrawArea() const
 	pWind->DrawRectangle(0, UI.ToolBarHeight, UI.width, UI.height - UI.StatusBarHeight);
 	
 }
-bool Output::isValid(Point p)const
+bool Output::isValid(Point p,double ly ,double lx)const
 {
-	return (p.y > UI.ToolBarHeight && p.y<UI.height-UI.StatusBarHeight && p.x>0 &&p.x<UI.width);
+	return (p.y > UI.ToolBarHeight+ly && p.y<UI.height-UI.StatusBarHeight-ly && p.x>0+lx &&p.x<UI.width-lx);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -215,9 +215,11 @@ void Output::DrawTri(Point P1, Point P2, Point P3, GfxInfo TritGfxInfo, bool sel
 
 void Output::DrawHex(Point P1, GfxInfo HexGfxInfo, bool selected) const
 {
+	long double l = 150;
+	if (isValid(P1, sqrt(3) * l / 2.0,l+10))
+	{
 	color DrawingClr;
 	drawstyle style;
-	long double l = 150;
 	int x[6] = { P1.x - l / 2,P1.x + l / 2,P1.x + l,P1.x + l / 2,P1.x - l / 2,P1.x - l };
 	int y[6] = { P1.y - sqrt(3) * l / 2.0, P1.y - sqrt(3) * l / 2.0,P1.y,P1.y + sqrt(3) * l / 2.0, P1.y + sqrt(3) * l / 2.0, P1.y };
 	if (selected)
@@ -232,6 +234,7 @@ void Output::DrawHex(Point P1, GfxInfo HexGfxInfo, bool selected) const
 	}
 	else style = FRAME;
 	pWind->DrawPolygon(x, y, 6, style);
+	}
 }
 
 void Output::DrawCircle(Point P1, Point P2, GfxInfo CircleGfxInfo, bool selected) const
