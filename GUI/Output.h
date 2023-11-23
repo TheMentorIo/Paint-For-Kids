@@ -25,6 +25,14 @@ public:
 	void DrawHex(Point P1, GfxInfo HexGfxInfo, bool selected = false) const;						//Draw a Hexagon
 	void DrawCircle(Point P1, Point P2, GfxInfo CircleGfxInfo, bool selected = false) const;		//Draw a Circle
 	
+	//added functions by beshoy
+	void testtoolbar(Point p); //function for testing 
+	void tochangecolor(Point p1, Point p2); //changing filling color
+	void picK(Point p1, Point p2, int& choise);  //pick for play mode
+	void flag(Point p); //point flag just for phase one
+	void chooswdrawcolor(Point p); //change drawcolor
+	void drawshape(Point p); //draw shapes ("u sont need function flag")
+	void isFilled();
 	///Make similar functions for drawing all other figure types.
 	
 	void PrintMessage(string msg) const;	//Print a message on Status bar
