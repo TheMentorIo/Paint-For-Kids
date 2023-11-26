@@ -190,45 +190,51 @@ int Output::getCrntPenWidth() const		//get current pen width
 
 void Output::DrawRect(Point P1, Point P2, GfxInfo RectGfxInfo, bool selected) const
 {
-	color DrawingClr;
-	if(selected)	
-		DrawingClr = UI.HighlightColor; //Figure should be drawn highlighted
-	else			
-		DrawingClr = RectGfxInfo.DrawClr;
-	
-	pWind->SetPen(DrawingClr,1);
-	drawstyle style;
-	if (RectGfxInfo.isFilled)	
-	{
-		style = FILLED;		
-		pWind->SetBrush(RectGfxInfo.FillClr);
-	}
-	else	
-		style = FRAME;
+	if (isValid(P1) && isValid(P2)) {
+		color DrawingClr;
+		if (selected)
+			DrawingClr = UI.HighlightColor; //Figure should be drawn highlighted
+		else
+			DrawingClr = RectGfxInfo.DrawClr;
 
-	
-	pWind->DrawRectangle(P1.x, P1.y, P2.x, P2.y, style);
+		pWind->SetPen(DrawingClr, 1);
+		drawstyle style;
+		if (RectGfxInfo.isFilled)
+		{
+			style = FILLED;
+			pWind->SetBrush(RectGfxInfo.FillClr);
+		}
+		else
+			style = FRAME;
+
+
+		pWind->DrawRectangle(P1.x, P1.y, P2.x, P2.y, style);
+	}
+	return;
 }
 
 void Output::DrawSquare(Point P1, GfxInfo SquareGfxInfo, bool selected) const
 {
 	double length = 65;
-	color DrawingClr;
-	if (selected)
-		DrawingClr = UI.HighlightColor;
-	else
-		DrawingClr = SquareGfxInfo.DrawClr;
+	if (isValid(P1,length/2,length/2)) {
+		color DrawingClr;
+		if (selected)
+			DrawingClr = UI.HighlightColor;
+		else
+			DrawingClr = SquareGfxInfo.DrawClr;
 
-	pWind->SetPen(DrawingClr, 1);
-	drawstyle style;
-	if (SquareGfxInfo.isFilled)
-	{
-		style = FILLED;
-		pWind->SetBrush(SquareGfxInfo.FillClr);
+		pWind->SetPen(DrawingClr, 1);
+		drawstyle style;
+		if (SquareGfxInfo.isFilled)
+		{
+			style = FILLED;
+			pWind->SetBrush(SquareGfxInfo.FillClr);
+		}
+		else
+			style = FRAME;
+		pWind->DrawRectangle(P1.x - length, P1.y - length, P1.x + length, P1.y + length, style);
 	}
-	else
-		style = FRAME;
-	pWind->DrawRectangle(P1.x - length, P1.y - length, P1.x + length, P1.y + length, style);
+	return;
 }
 
 void Output::DrawTri(Point P1, Point P2, Point P3, GfxInfo TritGfxInfo, bool selected) const
@@ -284,22 +290,25 @@ void Output::DrawHex(Point P1, GfxInfo HexGfxInfo, bool selected) const
 void Output::DrawCircle(Point P1, Point P2, GfxInfo CircleGfxInfo, bool selected) const
 {
 	double radius = sqrt(pow((P1.x - P2.x), 2) + pow((P1.y - P2.y), 2));
-	color DrawingClr;
-	if (selected)
-		DrawingClr = UI.HighlightColor;
-	else
-		DrawingClr = CircleGfxInfo.DrawClr;
+	if (isValid(P1,radius,radius) && isValid(P2)) {
+		color DrawingClr;
+		if (selected)
+			DrawingClr = UI.HighlightColor;
+		else
+			DrawingClr = CircleGfxInfo.DrawClr;
 
-	pWind->SetPen(DrawingClr, 1);
-	drawstyle style;
-	if (CircleGfxInfo.isFilled)
-	{
-		style = FILLED;
-		pWind->SetBrush(CircleGfxInfo.FillClr);
+		pWind->SetPen(DrawingClr, 1);
+		drawstyle style;
+		if (CircleGfxInfo.isFilled)
+		{
+			style = FILLED;
+			pWind->SetBrush(CircleGfxInfo.FillClr);
+		}
+		else
+			style = FRAME;
+		pWind->DrawCircle(P1.x, P1.y, radius, style);
 	}
-	else
-		style = FRAME;
-	pWind->DrawCircle(P1.x, P1.y, radius, style);
+	return;
 }
 
 int z = 0; //to know the mode

@@ -20,23 +20,22 @@ public:
 	bool isValid(Point p,double ly=0,double lx=0)const;
 	// -- Figures Drawing functions
 	void DrawRect(Point P1, Point P2, GfxInfo RectGfxInfo, bool selected=false) const;				//Draw a Rectangle
+	///Make similar functions for drawing all other figure types.
 	void DrawSquare(Point P1, GfxInfo SquareGfxInfo, bool selected = false) const;					//Draw a Square
 	void DrawTri(Point P1, Point P2, Point P3, GfxInfo TriGfxInfo, bool selected = false) const;	//Draw a Triangle
 	void DrawHex(Point P1, GfxInfo HexGfxInfo, bool selected = false) const;						//Draw a Hexagon
 	void DrawCircle(Point P1, Point P2, GfxInfo CircleGfxInfo, bool selected = false) const;		//Draw a Circle
 	
 	//added functions by beshoy
-	void testtoolbar(Point p); //function for testing 
-	void tochangecolor(Point p1, Point p2); //changing filling color
-	void picK(Point p1, Point p2, int& choise);  //pick for play mode
-	void flag(Point p); //point flag just for phase one
-	void chooswdrawcolor(Point p); //change drawcolor
+	void testtoolbar(Point p); //TEST Function
+	void tochangecolor(Point p1, Point p2); //Change FillColor
+	void picK(Point p1, Point p2, int& choise);  //Pick PlayMode
+	void flag(Point p); //Point Flag
+	void chooswdrawcolor(Point p); //Change DrawColor
 	void drawshape(Point p); //draw shapes ("u sont need function flag")
 	void isFilled();
-	///Make similar functions for drawing all other figure types.
-	
-	void PrintMessage(string msg) const;	//Print a message on Status bar
 
+	void PrintMessage(string msg) const;	//Print a message on Status bar
 	color getCrntDrawColor() const;	//get current drwawing color
 	color getCrntFillColor() const;	//get current filling color
 	int getCrntPenWidth() const;		//get current pen width
