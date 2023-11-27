@@ -309,8 +309,41 @@ int main()
 		case SELECT_FIGURE:
 			pOut->PrintMessage("Action: Select a figure , Click anywhere");
 			break;
-		case	CHANGE_COLOR:
-			pOut->PrintMessage("Action: Change color , Click anywhere");
+		case	CHANGE_COLOR_dBLACK:
+			pOut->PrintMessage("Action: Change drawing color to black , Click anywhere");
+			break;
+		case	CHANGE_COLOR_dRED:
+			pOut->PrintMessage("Action: Change drawing color to red , Click anywhere");
+			break;
+		case	CHANGE_COLOR_dORANGE:
+			pOut->PrintMessage("Action: Change drawing color to orange , Click anywhere");
+			break;
+		case	CHANGE_COLOR_dBLUE:
+			pOut->PrintMessage("Action: Change drawing color to blue , Click anywhere");
+			break;
+		case	CHANGE_COLOR_dGREEN:
+			pOut->PrintMessage("Action: Change drawing color to green , Click anywhere");
+			break;
+		case	CHANGE_COLOR_dYELLOW:
+			pOut->PrintMessage("Action: Change drawing color to yellow , Click anywhere");
+			break;
+		case	CHANGE_COLOR_fBLACK:
+			pOut->PrintMessage("Action: Change filling color to black , Click anywhere");
+			break;
+		case	CHANGE_COLOR_fRED:
+			pOut->PrintMessage("Action: Change filling color to red , Click anywhere");
+			break;
+		case	CHANGE_COLOR_fORANGE:
+			pOut->PrintMessage("Action: Change filling color to orange , Click anywhere");
+			break;
+		case	CHANGE_COLOR_fBLUE:
+			pOut->PrintMessage("Action: Change filling color to blue , Click anywhere");
+			break;
+		case	CHANGE_COLOR_fGREEN:
+			pOut->PrintMessage("Action: Change filling color to green , Click anywhere");
+			break;
+		case	CHANGE_COLOR_fYELLOW:
+			pOut->PrintMessage("Action: Change filling color to yellow , Click anywhere");
 			break;
 		case	MOVE_FIGURE:
 			pOut->PrintMessage("Action: Move a figure , Click anywhere");
