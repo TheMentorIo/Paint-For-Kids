@@ -9,6 +9,7 @@ Input::Input(window* pW)
 
 void Input::GetPointClicked(int& x, int& y) const
 {
+	pWind->FlushMouseQueue();
 	pWind->WaitMouseClick(x, y);	//Wait for mouse click
 }
 
@@ -18,6 +19,7 @@ string Input::GetSrting(Output* pO) const
 	char Key;
 	while (1)
 	{
+		pWind->FlushMouseQueue();
 		pWind->WaitKeyPress(Key);
 		if (Key == 27)	//ESCAPE key is pressed
 			return "";	//returns nothing as user has cancelled label
@@ -57,7 +59,44 @@ ActionType Input::GetUserAction() const
 			case ITM_TRIANGLE: return DRAW_TRIANGLE;
 			case ITM_HEX: return DRAW_HEX;
 			case ITM_SELECT: return SELECT_FIGURE;
-			case ITM_COLOR: return CHANGE_COLOR;
+			case ITM_COLORd:
+				if (y <= 23)
+				{
+					if (x <= 314)
+						return CHANGE_COLOR_dBLACK;
+					else if (x <= 328)
+						return CHANGE_COLOR_dRED;
+					else if (x <= 342)
+						return CHANGE_COLOR_dORANGE;
+				}
+				else
+				{
+					if (x <= 314)
+						return CHANGE_COLOR_dBLUE;
+					else if (x <= 328)
+						return CHANGE_COLOR_dGREEN;
+					else if (x <= 342)
+						return CHANGE_COLOR_dYELLOW;
+				}
+			case ITM_COLORf:
+				if (y <= 23)
+				{
+					if (x <= 364)
+						return CHANGE_COLOR_fBLACK;
+					else if (x <= 378)
+						return CHANGE_COLOR_fRED;
+					else if (x <= 392)
+						return CHANGE_COLOR_fORANGE;
+				}
+				else
+				{
+					if (x <= 364)
+						return CHANGE_COLOR_fBLUE;
+					else if (x <= 378)
+						return CHANGE_COLOR_fGREEN;
+					else if (x <= 392)
+						return CHANGE_COLOR_fYELLOW;
+				}
 			case ITM_MOVE: return MOVE_FIGURE;
 			case ITM_DELETE: return DELETE_FIGURE;
 			case ITM_UNDO: return UNDO;
@@ -121,3 +160,4 @@ ActionType Input::GetUserAction() const
 Input::~Input()
 {
 }
+

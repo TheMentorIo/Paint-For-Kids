@@ -88,7 +88,8 @@ void Output::CreateDrawToolBar() const
 	MenuItemImages[ITM_TRIANGLE] = "images\\MenuItems\\triangle.jpg";
 	MenuItemImages[ITM_HEX] = "images\\MenuItems\\hex.jpg";
 	MenuItemImages[ITM_SELECT] = "images\\MenuItems\\selection.jpg";
-	MenuItemImages[ITM_COLOR] = "images\\MenuItems\\color.jpg";
+	MenuItemImages[ITM_COLORd] = "images\\MenuItems\\drawcolors.jpg";
+	MenuItemImages[ITM_COLORf] = "images\\MenuItems\\drawcolors.jpg";
 	MenuItemImages[ITM_MOVE] = "images\\MenuItems\\move.jpg";
 	MenuItemImages[ITM_DELETE] = "images\\MenuItems\\bin.jpg";
 	MenuItemImages[ITM_UNDO] = "images\\MenuItems\\undo.jpg";
@@ -107,7 +108,7 @@ void Output::CreateDrawToolBar() const
 	UI.MenuItemWidth = 50;
 	//Draw menu item one image at a time
 	for (int i = 0; i < DRAW_ITM_COUNT; i++)
-		pWind->DrawImage(MenuItemImages[i], i * UI.MenuItemWidth, 0, UI.MenuItemWidth - 10, UI.ToolBarHeight - 5);
+		pWind->DrawImage(MenuItemImages[i], i * UI.MenuItemWidth, 0, UI.MenuItemWidth - 8, UI.ToolBarHeight - 4);
 
 
 

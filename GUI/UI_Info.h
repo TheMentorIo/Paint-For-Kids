@@ -23,7 +23,8 @@ enum DrawMenuItem //The items of the Draw menu (you should add more items)
 	ITM_TRIANGLE,   //TRIANGLE item in menu
 	ITM_HEX,		//hexagon item in menu
 	ITM_SELECT,     //Select figure
-	ITM_COLOR,      //CHANGE color
+	ITM_COLORd,      //CHANGE color
+	ITM_COLORf,
 	ITM_MOVE,       //move figuers
 	ITM_DELETE,     //delete figuers
 	ITM_UNDO,		//undo item in menu
