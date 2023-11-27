@@ -1,3 +1,4 @@
+
 #ifndef DEFS_H
 #define DEFS_H
 
@@ -7,6 +8,25 @@
 enum ActionType //The actions supported (you can add more if needed)
 {
 	DRAW_RECT,		//Draw Rectangle
+	DRAW_CIRC,
+	DRAW_SQUARE,
+	DRAW_TRIANGLE,
+	DRAW_HEX,
+	SELECT_FIGURE,
+	CHANGE_COLOR,
+	MOVE_FIGURE,
+	DELETE_FIGURE,
+	UNDO,
+	REDO,
+	CLEAR,
+	START_RECORDING,
+	STOP_RECORDING,
+	PLAY_RECORD,
+	SAVE_GRAPH,
+	LOAD_GRAPH,
+	PICK_FIGURE,
+	PICK_COLOR,
+	PICK_COLORED_FIGURE,
 	EXIT,			//Exit
 	TO_DRAW,		//Switch interface to Draw mode
 	TO_PLAY,		//Switch interface to Play mode
@@ -18,7 +38,9 @@ enum ActionType //The actions supported (you can add more if needed)
 };
 
 struct Point	//To be used for figures points
-{ int x,y; };
+{
+	int x, y;
+};
 
 struct GfxInfo	//Graphical info of each figure (you may add more members)
 {

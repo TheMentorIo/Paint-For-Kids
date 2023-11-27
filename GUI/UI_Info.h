@@ -17,23 +17,25 @@ enum DrawMenuItem //The items of the Draw menu (you should add more items)
 {
 	//Note: Items are **(ordered)** here as they appear in menu
 	//If you want to change the menu items order, change the order here
-	ITM_SWITCH1,    //switch to play mode
-	ITM_UNDO,		//undo item in menu
-	ITM_REDO,		//Redo item
 	ITM_RECT,		//Recangle item in menu
 	ITM_CIRC,		//CIRCLE item in menu
 	ITM_SQUARE,     //SQUARE item in menu
 	ITM_TRIANGLE,   //TRIANGLE item in menu
 	ITM_HEX,		//hexagon item in menu
+	ITM_SELECT,     //Select figure
 	ITM_COLOR,      //CHANGE color
 	ITM_MOVE,       //move figuers
 	ITM_DELETE,     //delete figuers
+	ITM_UNDO,		//undo item in menu
+	ITM_REDO,		//Redo item
 	ITM_CLEAR,      //delete all figuers
+	ITM_RECORD,     //start recording
+	ITM_STOP_RECORDING,       //stop recording
+	ITM_PLAY_RECORD,       //play record
 	ITM_SAVEGRAPH,  //save graph
 	ITM_LOADGRAPH,  //load graph
-	ITM_RECORD,     //start recording
-	ITM_STOP,       //stop recording
-	ITM_EXIT,		//Exit item
+	ITM_PLAY_MODE,    //switch to play mode
+	ITM_EXIT1,		//Exit item
 
 	DRAW_ITM_COUNT		//no. of menu items ==> This should be the last line in this enum
 
@@ -44,17 +46,15 @@ enum PlayMenuItem //The items of the Play menu (you should add more items)
 	//Note: Items are **(ordered)** here as they appear in menu
 	//If you want to change the menu items order, change the order here
 
-	ITM_SWITCH2,
-	ITM_PICK,
+	ITM_PICK_FIGURE,
+	ITM_PICK_COLOR,
+	ITM_PICK_COLORED_FIGURE,
+	ITM_DRAW_MODE,
+	ITM_EXIT2,
 
 	PLAY_ITM_COUNT		//no. of menu items ==> This should be the last line in this enum
 
 };
-
-//enum shit
-//{
-	//ITM_HIDE
-//};
 
 enum Colors
 {

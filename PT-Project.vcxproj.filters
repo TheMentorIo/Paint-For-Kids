@@ -7,7 +7,7 @@
     <Filter Include="CMUgraphicsLib\JPEG">
       <UniqueIdentifier>{74881736-22be-4b44-90b6-09a29eb1aa85}</UniqueIdentifier>
     </Filter>
-    <Filter Include="GUI Classes">
+    <Filter Include="CMUgraphicsLib\GUI Classes">
       <UniqueIdentifier>{03fd4e0d-92e0-4271-bb9b-d6e9f21ec35f}</UniqueIdentifier>
     </Filter>
   </ItemGroup>
@@ -118,10 +118,10 @@
       <Filter>CMUgraphicsLib\JPEG</Filter>
     </ClCompile>
     <ClCompile Include="GUI\Input.cpp">
-      <Filter>GUI Classes</Filter>
+      <Filter>CMUgraphicsLib\GUI Classes</Filter>
     </ClCompile>
     <ClCompile Include="GUI\Output.cpp">
-      <Filter>GUI Classes</Filter>
+      <Filter>CMUgraphicsLib\GUI Classes</Filter>
     </ClCompile>
     <ClCompile Include="TestCode.cpp" />
     <ClCompile Include="CMUgraphicsLib\colors.cpp">
@@ -190,13 +190,13 @@
       <Filter>CMUgraphicsLib\JPEG</Filter>
     </ClInclude>
     <ClInclude Include="GUI\Input.h">
-      <Filter>GUI Classes</Filter>
+      <Filter>CMUgraphicsLib\GUI Classes</Filter>
     </ClInclude>
     <ClInclude Include="GUI\Output.h">
-      <Filter>GUI Classes</Filter>
+      <Filter>CMUgraphicsLib\GUI Classes</Filter>
     </ClInclude>
     <ClInclude Include="GUI\UI_Info.h">
-      <Filter>GUI Classes</Filter>
+      <Filter>CMUgraphicsLib\GUI Classes</Filter>
     </ClInclude>
     <ClInclude Include="DEFS.h" />
   </ItemGroup>
