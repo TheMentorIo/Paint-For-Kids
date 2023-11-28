@@ -225,7 +225,7 @@ void Output::DrawRect(Point P1, Point P2, GfxInfo RectGfxInfo, bool selected) co
 
 void Output::DrawSquare(Point P1, GfxInfo SquareGfxInfo, bool selected) const
 {
-	double HFlength = 65;
+	double HFlength = 75;
 	if (isValid(P1,HFlength,HFlength)) {
 		color DrawingClr;
 		if (selected)
@@ -275,13 +275,13 @@ void Output::DrawTri(Point P1, Point P2, Point P3, GfxInfo TritGfxInfo, bool sel
 
 void Output::DrawHex(Point P1, GfxInfo HexGfxInfo, bool selected) const
 {
-	long double l = 150;
-	if (isValid(P1, sqrt(3) * l / 2.0,l))
+	 double length = 75;
+	if (isValid(P1, sqrt(3) * length / 2.0,length))
 	{
 	color DrawingClr;
 	drawstyle style;
-	int x[6] = { P1.x - l / 2,P1.x + l / 2,P1.x + l,P1.x + l / 2,P1.x - l / 2,P1.x - l };
-	int y[6] = { P1.y - sqrt(3) * l / 2.0, P1.y - sqrt(3) * l / 2.0,P1.y,P1.y + sqrt(3) * l / 2.0, P1.y + sqrt(3) * l / 2.0, P1.y };
+	int x[6] = { P1.x - length / 2,P1.x + length / 2,P1.x + length,P1.x + length / 2,P1.x - length / 2,P1.x - length };
+	int y[6] = { P1.y - sqrt(3) * length / 2.0, P1.y - sqrt(3) * length / 2.0,P1.y,P1.y + sqrt(3) * length / 2.0, P1.y + sqrt(3) * length / 2.0, P1.y };
 	if (selected)
 		DrawingClr = UI.HighlightColor;
 	else
