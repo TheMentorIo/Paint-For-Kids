@@ -152,7 +152,17 @@ void Output::ClearDrawArea() const
 }
 bool Output::isValid(Point p, double ly, double lx)const
 {
-	return (p.y > UI.ToolBarHeight + ly && p.y < UI.height - UI.StatusBarHeight - ly && p.x>0 + lx && p.x < UI.width - lx);
+	Input pIn(pWind);
+	if (p.y > UI.ToolBarHeight +3+ ly && p.y < UI.height - UI.StatusBarHeight -3- ly && p.x>0 + lx && p.x < UI.width - 20-lx)
+	{
+		return 1;
+	}
+	else
+	{
+		PrintMessage("Invalid Points , Can't Draw The Shape Out Of Drawing Area !");
+		pIn.GetPointClicked(p.x, p.y);
+		return 0;
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -215,8 +225,8 @@ void Output::DrawRect(Point P1, Point P2, GfxInfo RectGfxInfo, bool selected) co
 
 void Output::DrawSquare(Point P1, GfxInfo SquareGfxInfo, bool selected) const
 {
-	double length = 65;
-	if (isValid(P1,length/2,length/2)) {
+	double HFlength = 65;
+	if (isValid(P1,HFlength,HFlength)) {
 		color DrawingClr;
 		if (selected)
 			DrawingClr = UI.HighlightColor;
@@ -232,7 +242,7 @@ void Output::DrawSquare(Point P1, GfxInfo SquareGfxInfo, bool selected) const
 		}
 		else
 			style = FRAME;
-		pWind->DrawRectangle(P1.x - length, P1.y - length, P1.x + length, P1.y + length, style);
+		pWind->DrawRectangle(P1.x - HFlength, P1.y - HFlength, P1.x + HFlength, P1.y + HFlength, style);
 	}
 	return;
 }
@@ -266,7 +276,7 @@ void Output::DrawTri(Point P1, Point P2, Point P3, GfxInfo TritGfxInfo, bool sel
 void Output::DrawHex(Point P1, GfxInfo HexGfxInfo, bool selected) const
 {
 	long double l = 150;
-	if (isValid(P1, sqrt(3) * l / 2.0,l+10))
+	if (isValid(P1, sqrt(3) * l / 2.0,l))
 	{
 	color DrawingClr;
 	drawstyle style;
